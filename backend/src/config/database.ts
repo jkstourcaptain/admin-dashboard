@@ -1,8 +1,10 @@
 import sqlite3 from "sqlite3";
 import path from "path";
 
-// 실제 파일 데이터베이스 사용
-const dbPath = path.join(__dirname, "../../data/explorer_admin.db");
+// 실제 파일 데이터베이스 사용 (프로덕션용)
+const dbPath = process.env.NODE_ENV === 'production' 
+  ? path.join(process.cwd(), "data/explorer_admin.db")
+  : path.join(__dirname, "../../data/explorer_admin.db");
 export const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error("Database connection error:", err);
