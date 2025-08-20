@@ -25,6 +25,9 @@ const app = express();
 const PORT = parseInt(process.env.PORT || '3001', 10);
 const HOST = process.env.HOST || '0.0.0.0'; // 외부 접속 허용
 
+// Trust proxy for Render deployment
+app.set('trust proxy', 1);
+
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,

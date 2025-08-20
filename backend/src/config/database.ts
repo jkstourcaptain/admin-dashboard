@@ -3,7 +3,7 @@ import path from "path";
 
 // 실제 파일 데이터베이스 사용 (프로덕션용)
 const dbPath = process.env.NODE_ENV === 'production' 
-  ? path.join(process.cwd(), "data/explorer_admin.db")
+  ? "/tmp/explorer_admin.db"  // Render의 임시 디렉토리 사용
   : path.join(__dirname, "../../data/explorer_admin.db");
 export const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
