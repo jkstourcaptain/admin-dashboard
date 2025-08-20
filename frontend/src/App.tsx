@@ -345,11 +345,8 @@ function App() {
     setError("");
 
     try {
-      // 현재 호스트를 기반으로 API URL 설정
-      const apiBaseUrl =
-        window.location.hostname === "localhost"
-          ? "http://localhost:3001"
-          : `http://${window.location.hostname}:3001`;
+      // 환경에 따른 API URL 설정
+      const apiBaseUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
       const response = await fetch(`${apiBaseUrl}/api/admin/auth/login`, {
         method: "POST",
