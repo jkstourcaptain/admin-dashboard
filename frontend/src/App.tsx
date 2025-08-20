@@ -129,8 +129,8 @@ function App() {
   const [productPrice, setProductPrice] = useState("");
   const [productStock, setProductStock] = useState("");
   const [productStatus, setProductStatus] = useState("판매중");
-  // const [productImage, setProductImage] = useState<File | null>(null);
-  // const [adImages, setAdImages] = useState<File[]>([]);
+  const [productImage, setProductImage] = useState<File | null>(null);
+  const [adImages, setAdImages] = useState<File[]>([]);
   const [productImagePreview, setProductImagePreview] = useState("");
   const [isRegisteringAd, setIsRegisteringAd] = useState(false);
   const [isEditingAd, setIsEditingAd] = useState(false);
