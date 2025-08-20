@@ -14,10 +14,12 @@
     "declaration": false,
     "declarationMap": false,
     "sourceMap": false,
-    "types": ["node"],
     "moduleResolution": "node",
     "allowJs": true,
-    "noEmit": false
+    "noEmit": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false
   },
   "include": [
     "src/**/*"
