@@ -1,5 +1,5 @@
 import React from "react";
-import { TrendingUpIcon, TrendingDownIcon } from "@heroicons/react/24/solid";
+import { ArrowTrendingUpIcon, ArrowTrendingDownIcon } from "@heroicons/react/24/solid";
 
 interface UserStatsCardsProps {
   androidSignups: number;
@@ -36,9 +36,9 @@ const UserStatsCards: React.FC<UserStatsCardsProps> = ({
           }`}
         >
           {change >= 0 ? (
-            <TrendingUpIcon className="w-4 h-4 mr-1" />
+            <ArrowTrendingUpIcon className="w-4 h-4 mr-1" />
           ) : (
-            <TrendingDownIcon className="w-4 h-4 mr-1" />
+            <ArrowTrendingDownIcon className="w-4 h-4 mr-1" />
           )}
           {change >= 0 ? "+" : ""}
           {change} {changeLabel}

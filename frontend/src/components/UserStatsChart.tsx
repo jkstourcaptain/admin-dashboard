@@ -18,7 +18,7 @@ interface UserStatsChartProps {
   data: DailyStats[];
 }
 
-const UserStatsChart: React.FC<UserStatsChartProps> = ({ data }) => {
+const UserStatsChart: React.FC<UserStatsChartProps> = () => {
   return (
     <div className="card">
       <h3 className="text-lg font-semibold text-green-600 mb-4">✅ 실시간 업데이트 성공! 막대그래프 제거됨</h3>

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { DashboardStats } from "../types";
+import type { DashboardStats } from "../types";
 import api from "../services/api";
 
 interface DashboardState {
